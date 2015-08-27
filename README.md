@@ -18,6 +18,7 @@ first time
 
 Use userdata below to invoke the ansible-playbook from the controller server
 
+```
 "#!/bin/bash\n",
 "mkdir /etc/ansible\n",
 "echo '[defaults]' > /etc/ansible/ansible.cfg",
@@ -26,3 +27,4 @@ Use userdata below to invoke the ansible-playbook from the controller server
 "\n",
 "curl http://",{"Ref" : "ControllerDNSName"}, ":8000/runplaybook/myeeapp/${privateip}/ >> /var/log/app.log 2>>/var/log/app.log",
 "\n",
+```
